@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap');
+
+:root{
+    --cyan:hsl(150,36%,37%);
+    --darkcyan:hsl(159,91%,9%);
+    --cream:hsl(30, 38%, 92%);
+    --darkblue:hsl(212, 21%, 14%);
+    --darkgray:hsl(228, 12%, 48%);
+    --white:hsl(0, 0%, 100%);
+    --font:14px;
+    --mobile:375px;
+    --desktop:1440px;
+    --Montserrat:'Montserrat', sans-serif;
+    --Fraunces:'Fraunces', serif;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body{
+    width: 100%;
+    background-color: var(--cream);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card{
+    background-color: var(--white);
+    width:520px;
+    height: 447px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.card .card-image{
+    width: 50%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    overflow: hidden;
+}
+.card .card-image img{
+    width: 100%;
+    object-fit: cover;
+}
+.card .card-info{
+    width: 50%;
+    height: auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    margin-right: 20px;
+    
+}
+
+.card .card-info .card-category{
+    font-family: var(--Montserrat);
+    font-size: 12px;
+    color: var(--darkgray);
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+.card .card-info .card-title{
+    font-family: var(--Fraunces);
+    font-size: 32px;
+    color: var(--darkblue);
+    line-height: 32px;
+}
+
+.card .card-info .card-description{
+    font-family: var(--Montserrat);
+    font-size: var(--font);
+    color: var(--darkgray);
+    line-height: 24px;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+.card .card-info .card-price{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+.card .card-info .card-price h1{
+    font-family: var(--Fraunces);
+    font-size: 32px;
+    color: var(--cyan);
+    line-height: 32px;
+}
+
+.card .card-info .card-price small{
+    font-family: var(--Montserrat);
+    font-size: 14px;
+    color: var(--darkgray);
+    line-height: 24px;
+    text-decoration: line-through;
+}
+
+.card .card-info .card-cart{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: var(--cyan);
+    width: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 1rem;
+    transition: all .2s ease-in-out;
+}
+.card .card-info .card-cart:hover{
+    background-color: var(--darkcyan);
+}
+.card .card-info .card-cart p{
+    font-family: var(--Montserrat);
+    font-size: 14px;
+    color: var(--white);
+    line-height: 24px;
+    font-weight: 700;
+}
+.card .card-info .card-cart img{
+    width: 20px;
+    height: 20px;
+}
+
+@media (max-width:431px){
+    .card{
+        width: 327px;
+        height: auto;
+        flex-direction: column;
+    }
+    .card .card-image{
+        width: 100%;
+        height: 240px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        overflow: hidden;
+    }
+    .card .card-info{
+        width: 100%;
+        height: auto;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+        margin-right: 0px;
+    }
+
+    .card .card-info .card-title{
+        font-size: 28px;
+        line-height: 32px;
+    }
+
+    .card .card-info .card-description{
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+    .card .card-info .card-price{
+        gap: 10px;
+    }
+
+}
